@@ -1,0 +1,9 @@
+SELECT     recno, transcode, recdate, rectime, empId, incharge, payrolldate, cutoffstartdate, cutoffdate, prev_bal, prev_unpaid_charges, charges, 
+                      charges_adjustment, charges_adjustment_reason, total_charges, prev_rem_subsidy, subsidy, ot_subsidy, other_subsidy, subsidy_adjustment, 
+                      subsidy_adjustment_reason, sum_of_subsidies, total_subsidies, current_rem_subsidy, subsidy_used, subtotal_2, subtotal, 
+                      subtotal_2 - subtotal AS Expr1, sum_of_subsidies AS Expr2, total_charges AS utangtanan, subsidy_used AS sagotsakao, payrolldeduction2, 
+                      payrolldeduction, actualdeduction, payrolldeduction2 - actualdeduction AS sobrakulang, actualdeduction2, deduction_adjustment, empbalance, 
+                      actual_payment, current_rem_bal, payable, payments, balance, paymentdate, remarks, void, voidreason, subsidystatus, prev_bal2
+FROM         tbl_logs
+WHERE     (payrolldate IN ('4/30/2015', '5/15/2015'))
+ORDER BY empId, payrolldate

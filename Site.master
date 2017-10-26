@@ -1,0 +1,85 @@
+﻿<%@ Master Language="VB" CodeFile="Site.master.vb" Inherits="Site" %>  
+<!DOCTYPE>
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+	
+	<title>Canteen Charging System</title>
+    <link rel="shortcut icon" type="image/ico" href="assets/favicon.ico" />
+	<link type="text/css" href="style.css" rel="stylesheet" /> <!-- the layout css file -->
+	<link type="text/css" href="css/jquery.cleditor.css" rel="stylesheet" />
+	<!--[if IE 8]>
+		<script type='text/javascript' src='js/excanvas.js'></script>
+		<link rel="stylesheet" href="css/IEfix.css" type="text/css" media="screen" />
+	<![endif]--> 
+ 
+	<!--[if IE 7]>
+		<script type='text/javascript' src='js/excanvas.js'></script>
+		<link rel="stylesheet" href="css/IEfix.css" type="text/css" media="screen" />
+	<![endif]--> 
+	<script type='text/javascript' src='js/jquery-1.4.2.min.js'></script>	<!-- jquery library -->
+	<script type='text/javascript' src='js/jquery-ui-1.8.5.custom.min.js'></script> <!-- jquery UI -->
+	<script type='text/javascript' src='js/cufon-yui.js'></script> <!-- Cufon font replacement -->
+	<script type='text/javascript' src='js/ColaborateLight_400.font.js'></script> <!-- the Colaborate Light font -->
+	<script type='text/javascript' src='js/easyTooltip.js'></script> <!-- element tooltips -->
+	<script type='text/javascript' src='js/jquery.tablesorter.min.js'></script> <!-- tablesorter -->
+	
+	<script type='text/javascript' src='js/visualize.jQuery.js'></script> <!-- visualize plugin for graphs / statistics -->
+	<script type='text/javascript' src='js/iphone-style-checkboxes.js'></script> <!-- iphone like checkboxes -->
+	<script type='text/javascript' src='js/jquery.cleditor.min.js'></script> <!-- wysiwyg editor -->
+	<script type='text/javascript' src='js/custom.js'></script> <!-- the "make them work" script -->
+
+</head>
+
+<body>
+
+	<div id="container">
+		<div id="bgwrap">
+		 <form id="form1" runat="server" >
+			<div id="primary_left">
+        
+				<div id="logo">
+					<a href="Default.aspx" title="Dashboard"><img src="assets/logo.png" alt="" /></a>
+				</div> <!-- logo end -->
+
+		<div id="menu"> <!-- navigation menu -->
+		   
+			<ul>
+                <li><asp:LinkButton CausesValidation="false" ID="btnhome" CssClass="" runat="server"><img src="assets/icons/small_icons_3/Home.png" alt="" /><span>Home</span></asp:LinkButton></li> 
+                <li><asp:LinkButton CausesValidation="false"  ID="btnviewprevbal"  CssClass="" runat="server"><img src="assets/icons/small_icons_3/Designs.png" alt="" /><span>History</span></asp:LinkButton> </li>
+                <li><asp:LinkButton CausesValidation="false" ID="btnviewsub"  CssClass="" runat="server"><img src="assets/icons/small_icons_3/coin.png" alt="" /><span>Subsidy</span></asp:LinkButton> </li>
+                <li><asp:LinkButton CausesValidation="false"  ID="btnotsub" CssClass="" runat="server"><img src="assets/icons/small_icons_3/Terminal.png" alt="" /><span>Overtime Subsidy</span></asp:LinkButton> </li>
+                <li><asp:LinkButton CausesValidation="false"  ID="btnothersub" CssClass="" runat="server"><img src="assets/icons/small_icons_3/notes.png" alt="" /><span>Other Subsidy</span></asp:LinkButton> </li>
+				<li><asp:LinkButton CausesValidation="false"  ID="btnpincode"  CssClass="" runat="server"><img src="assets/icons/small_icons_3/Safe.png" alt="" /><span>My Pincode</span></asp:LinkButton> </li>
+                <li><asp:LinkButton CausesValidation="false"  ID="btnfeedback" CssClass="" runat="server"><img src="assets/icons/small_icons_3/Feedback.png" alt="" /><span>Feedback</span></asp:LinkButton> </li>
+                <li><asp:LinkButton CausesValidation="false"  ID="btnlogout" CssClass="" runat="server"><img src="assets/icons/small_icons_3/settings.png" alt="" /><span>Logout</span></asp:LinkButton> </li>
+			</ul>
+	 
+				</div> <!-- navigation menu end -->
+			</div> <!-- sidebar end -->
+
+			<div id="primary_right">
+            <div id="rightinner">
+			<div style="position:fixed;top:0px;left:215px;overflow:hidden;z-index:999;background-color: #fff; padding: 0 570px 0 25px ;">
+			  <center><img style="position:relative; left: 240px;" width="400px" src="assets/kao_logo.png" alt="PKI Canteen" /></center>
+			</div>
+					
+				<div class="inner" style="margin-top: 50px;">
+					
+					 <asp:contentplaceholder id="ContentPlaceHolder1" runat="server"></asp:contentplaceholder>  
+			
+					<div class="clearboth"></div>
+					<div id="footer" class="fullwidth">
+					<div class="one_half"><p>Pilipinas Kao Inc.</p></div>
+					<div class="one_half last"><p style="text-align:right;">&copy; <%= DateTime.Now.Year.ToString() %> - MIS Department - <small>seenkax error!</small></p></div>
+					</div> <!-- end footer -->
+				</div>  
+
+                </div>
+			</div> <!-- primary_right -->
+		 </form>
+		</div> <!-- bgwrap -->
+	</div> <!-- container -->
+	
+	</body>
+</html>
